@@ -14,12 +14,6 @@ export default new Router()
     return serviceWorker('.next/static/service-worker.js')
   })
   .destination(
-    'legacy', // displayed in the destination dropdown
-    new Router()
-      // additional routing rules for the legacy experience go here
-      .fallback(({ proxy }) => proxy('legacy')),
-  )
-  .destination(
     'new', // displayed in the destination dropdown
     new Router()
       // additional routing rules for the new experience go here
